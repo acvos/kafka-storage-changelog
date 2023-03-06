@@ -1,0 +1,39 @@
+{
+  "name": "kafka-storage-changelog",
+  "description": "Kafka changelog adadpter for Storage",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "rimraf dist && tsc -d",
+    "prepublishOnly": "npm run build",
+    "test": "mocha -r ts-node/register test/**/index.test.ts"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Anton Chernikov",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:acvos/kafka-storage-changelog.git"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=4.0",
+    "npm": ">=2.0"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@navarik/storage": "^23.0.0",
+    "@types/chai": "^4.2.15",
+    "@types/kafkajs": "^1.9.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.0.3",
+    "@types/uuid": "^9.0.1",
+    "chai": "^4.3.4",
+    "mocha": "^10.0.0",
+    "rimraf": "^4.1.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.2.3"
+  }
+}
