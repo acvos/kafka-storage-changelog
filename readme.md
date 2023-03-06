@@ -45,5 +45,4 @@ async function main() {
 }
 
 main()
-}
 ```
